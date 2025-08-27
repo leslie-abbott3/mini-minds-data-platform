@@ -1,0 +1,12 @@
+name: 'mini_minds_analytics'
+version: '1.0'
+profile: 'default'
+model-paths: ['models']
+macro-paths: ['macros']
+models:
+  mini_minds_analytics:
+    +materialized: table
+    staging:
+      +schema: staging
+    marts:
+      +schema: marts
