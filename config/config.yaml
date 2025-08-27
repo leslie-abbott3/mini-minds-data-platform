@@ -1,0 +1,28 @@
+database:
+  type: sqlite
+  path: "mini_minds.db"
+
+etl:
+  sources:
+    - data/raw/behavioral.csv
+    - data/raw/operational.csv
+    - data/raw/game_results.csv
+
+warehouse:
+  output: "data/warehouse"
+
+kpis:
+  - active_users
+  - session_duration
+  - churn_rate
+  - conversion_rate
+
+ml:
+  target_column: "has_learning_disability"
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+  xgboost:
+    n_estimators: 300
+    learning_rate: 0.05
+    max_depth: 6
