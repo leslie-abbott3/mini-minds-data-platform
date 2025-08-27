@@ -1,54 +1,3 @@
-🔹 Project Structure
-mini-minds-analytics/
-│
-├── config/
-│   └── config.yaml                  # Unified config (ETL + ML models)
-│
-├── data/
-│   ├── raw/                         # Raw input data (behavioral, operational, game results)
-│   ├── warehouse/                   # Warehouse-ready dbt outputs
-│   └── processed/                   # Features for ML models
-│
-├── dbt_project/                     # dbt SQL models & tests
-│   ├── models/
-│   │   ├── staging/                 # Clean staging models
-│   │   ├── marts/                   # Business-facing marts (KPIs)
-│   │   └── schema.yml               # dbt tests
-│   └── macros/                      # Custom macros
-│
-├── pipelines/                       # ETL + reporting
-│   ├── run_etl.py                   # Python ETL
-│   ├── run_dbt.sh                   # Run dbt transformations
-│   ├── validate_data.py             # Data quality checks
-│   └── kpi_summary.py               # Generate KPI reports
-│
-├── ml/                              # ML workflow
-│   ├── preprocess.py                # Feature extraction from game results
-│   ├── train_models.py              # Train Random Forest, XGBoost
-│   ├── evaluate.py                  # Evaluate model
-│   ├── interpret.py                 # SHAP interpretability
-│   └── utils.py                     # Shared helpers
-│
-├── notebooks/
-│   ├── exploratory_analysis.ipynb   # KPI exploration
-│   └── eda_game_metrics.ipynb       # Game data ML exploration
-│
-├── models/
-│   └── saved/                       # Trained ML models
-│
-├── reports/
-│   ├── kpis.csv                     # KPI summary
-│   ├── model_performance.csv        # ML performance
-│   └── feature_importance.png       # SHAP output
-│
-├── tests/
-│   └── test_data_quality.py         # Unit tests
-│
-├── requirements.txt
-├── README.md
-├── Dockerfile
-├── .dockerignore
-└── LICENSE
 
 # Mini Minds Analytics Platform
 
@@ -126,3 +75,55 @@ shap
 matplotlib
 seaborn
 pytest
+
+🔹 Project Structure
+mini-minds-analytics/
+│
+├── config/
+│   └── config.yaml                  # Unified config (ETL + ML models)
+│
+├── data/
+│   ├── raw/                         # Raw input data (behavioral, operational, game results)
+│   ├── warehouse/                   # Warehouse-ready dbt outputs
+│   └── processed/                   # Features for ML models
+│
+├── dbt_project/                     # dbt SQL models & tests
+│   ├── models/
+│   │   ├── staging/                 # Clean staging models
+│   │   ├── marts/                   # Business-facing marts (KPIs)
+│   │   └── schema.yml               # dbt tests
+│   └── macros/                      # Custom macros
+│
+├── pipelines/                       # ETL + reporting
+│   ├── run_etl.py                   # Python ETL
+│   ├── run_dbt.sh                   # Run dbt transformations
+│   ├── validate_data.py             # Data quality checks
+│   └── kpi_summary.py               # Generate KPI reports
+│
+├── ml/                              # ML workflow
+│   ├── preprocess.py                # Feature extraction from game results
+│   ├── train_models.py              # Train Random Forest, XGBoost
+│   ├── evaluate.py                  # Evaluate model
+│   ├── interpret.py                 # SHAP interpretability
+│   └── utils.py                     # Shared helpers
+│
+├── notebooks/
+│   ├── exploratory_analysis.ipynb   # KPI exploration
+│   └── eda_game_metrics.ipynb       # Game data ML exploration
+│
+├── models/
+│   └── saved/                       # Trained ML models
+│
+├── reports/
+│   ├── kpis.csv                     # KPI summary
+│   ├── model_performance.csv        # ML performance
+│   └── feature_importance.png       # SHAP output
+│
+├── tests/
+│   └── test_data_quality.py         # Unit tests
+│
+├── requirements.txt
+├── README.md
+├── Dockerfile
+├── .dockerignore
+└── LICENSE
