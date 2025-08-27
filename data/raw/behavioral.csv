@@ -1,0 +1,2 @@
+user_id,session_id,session_start,session_end,session_duration
+u1,s1,2025-07-01T10:00:00,2025-07-01T10:20:00,1200
