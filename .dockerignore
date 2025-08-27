@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+data/warehouse/*
+data/processed/*
+models/saved/*
+reports/*
+logs/
+*.ipynb_checkpoints
