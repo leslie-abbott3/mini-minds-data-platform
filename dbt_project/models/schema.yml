@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_behavioral
+    description: "Cleaned behavioral sessions"
+    columns:
+      - name: user_id
+        tests: [not_null]
+      - name: session_duration
+        tests: [not_null]
+
+  - name: stg_operational
+    description: "Cleaned operational metrics"
+    columns:
+      - name: user_id
+        tests: [not_null]
+
+  - name: stg_game_results
+    description: "Cleaned game results"
+    columns:
+      - name: user_id
+        tests: [not_null]
+
+  - name: dim_users
+    description: "User dimension"
+    columns:
+      - name: user_id
+        tests: [unique, not_null]
+
+  - name: fct_user_engagement
+    description: "User engagement fact table"
+    columns:
+      - name: user_id
+        tests: [not_null]
+
+  - name: kpi_summary
+    description: "High-level KPIs"
