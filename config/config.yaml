@@ -18,11 +18,15 @@ kpis:
   - conversion_rate
 
 ml:
+  features_path: "data/processed/features.csv"
   target_column: "has_learning_disability"
   random_forest:
     n_estimators: 200
     max_depth: 10
+    random_state: 42
   xgboost:
     n_estimators: 300
     learning_rate: 0.05
     max_depth: 6
+    subsample: 0.9
+    colsample_bytree: 0.9
